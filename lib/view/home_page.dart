@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gotech_mashinetest/widgets/appbar_widget.dart';
+import 'package:gotech_mashinetest/widgets/expansion_panel_widget.dart';
+import 'package:gotech_mashinetest/widgets/sizedbox16_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,52 +20,22 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size(MediaQuery.sizeOf(context).width, 60),
-          child: AppbarWidget()),
-      body: Column(
+          child: const AppbarWidget(
+            tittle: "HOME",
+          )),
+      body: const Column(
         children: [
-          ExpansionPanelList(
-            expansionCallback: (panelIndex, isExpanded) {
-              active = !active;
-              if (exTitle == "Sport Categories")
-                exTitle = "Contract";
-              else
-                exTitle = "Sport Categories";
-              setState(() {});
-            },
-            children: <ExpansionPanel>[
-              ExpansionPanel(
-                  headerBuilder: (context, isExpanded) {
-                    return Text(exTitle);
-                  },
-                  body: Column(
-                    children: [
-                      ExpansionPanelList(
-                        expansionCallback: (panelIndex, isExpanded) {
-                          active1 = !active1;
-                          if (exTitle == "Sport Categories")
-                            exTitle = "Contract";
-                          else
-                            exTitle = "Sport Categories";
-                          setState(() {});
-                        },
-                        children: <ExpansionPanel>[
-                          ExpansionPanel(
-                              headerBuilder: (context, isExpanded) {
-                                return Text(exTitle);
-                              },
-                              isExpanded: active1,
-                              canTapOnHeader: true,
-                              body: Column(
-                                children: [Text("Sinan")],
-                              ))
-                        ],
-                      ),
-                    ],
-                  ),
-                  isExpanded: active,
-                  canTapOnHeader: true)
-            ],
+          SizedBox16Widget(),
+          ExpansionPanelWidget(
+            heading: "LevelX",
+            subheading: "Flutter",
+            tittle: "1st Team",
+            description: "It is a big team in this institution",
           ),
+          SizedBox16Widget(),
+          // ExpansionPanelWidget(),
+          SizedBox16Widget(),
+          // ExpansionPanelWidget()
         ],
       ),
     );

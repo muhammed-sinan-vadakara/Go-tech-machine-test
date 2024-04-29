@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AppbarWidget extends StatelessWidget {
-  const AppbarWidget({super.key});
+  final String tittle;
+  const AppbarWidget({super.key, required this.tittle});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text("HOME"),
+      title: Text(tittle),
+      backgroundColor: Colors.deepPurpleAccent,
       centerTitle: true,
     );
   }
