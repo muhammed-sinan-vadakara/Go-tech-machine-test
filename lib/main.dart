@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gotech_mashinetest/view/home_page.dart';
+import 'package:gotech_mashinetest/view/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
