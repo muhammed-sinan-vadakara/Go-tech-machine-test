@@ -4,17 +4,8 @@ import 'package:gotech_mashinetest/view/widgets/menu_content_widget.dart';
 import 'package:gotech_mashinetest/view/widgets/menu_widget.dart';
 import 'package:gotech_mashinetest/core/widgets/gap_widget.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  String exTitle = "Sport Categories";
-  bool active = false;
-  bool active1 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +21,9 @@ class _HomePageState extends State<HomePage> {
             GapWidget.h16(),
             MenuWidget(
               title: 'Hello',
-              child: MenuContentWidget(content: 'sdfsdf', title: 'sdfs'),
+              child: MenuWidget(
+                  title: 'SUB',
+                  child: MenuContentWidget(content: 'sdfsdf', title: 'sdfs')),
             ),
             GapWidget.h16(),
             MenuWidget(title: 'Hello', child: Text('sdfdsf')),
