@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gotech_mashinetest/view/widgets/appbar_widget.dart';
+import 'package:gotech_mashinetest/view/widgets/menu_content_widget.dart';
 import 'package:gotech_mashinetest/view/widgets/menu_widget.dart';
 import 'package:gotech_mashinetest/core/widgets/gap_widget.dart';
 
@@ -27,7 +28,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             GapWidget.h16(),
-            MenuWidget(title: 'Hello', child: Text('sdfdsf')),
+            MenuWidget(
+              title: 'Hello',
+              child: MenuContentWidget(content: 'sdfsdf', title: 'sdfs'),
+            ),
             GapWidget.h16(),
             MenuWidget(title: 'Hello', child: Text('sdfdsf')),
             GapWidget.h16(),
