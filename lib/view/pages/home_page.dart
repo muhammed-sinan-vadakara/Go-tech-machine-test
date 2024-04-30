@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gotech_mashinetest/core/widgets/gap_widget.dart';
 import 'package:gotech_mashinetest/view/widgets/appbar_widget.dart';
 import 'package:gotech_mashinetest/view/widgets/menu_widget.dart';
 
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
           )),
       body: SingleChildScrollView(
         child: Column(
-          children: [...getMenuToRender([])],
+          children: [const GapWidget.h16(), ...getMenuToRender([])],
         ),
       ),
     );
