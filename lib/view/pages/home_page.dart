@@ -28,8 +28,11 @@ class _HomePageState extends State<HomePage> {
           children: [
             GapWidget.h16(),
             MenuWidget(title: 'Hello', child: Text('sdfdsf')),
+            GapWidget.h16(),
             MenuWidget(title: 'Hello', child: Text('sdfdsf')),
+            GapWidget.h16(),
             MenuWidget(title: 'Hello', child: Text('sdfdsf')),
+            GapWidget.h16(),
           ],
         ),
       ),
