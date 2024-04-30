@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gotech_mashinetest/view/pages/home_page.dart';
 import 'package:gotech_mashinetest/view/pages/splash_screen.dart';
 
 void main() {
